@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <canvas id="collisionCanvas"></canvas>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>          <div></div>
+          <div></div>
+
+    <svg id="base-svg"></svg>
+    <script src="utlis.js"></script>
+    <script src="script.js"></script>
+
+
+
+  <div class="canvas-container">
+    <svg class="canvas" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="80" fill="#37748a" />
+    </svg>
+    <svg class="canvas" viewBox="0 0 200 200">
+    <rect x="50" y="50" width="100" height="100" fill="#140002" />
+
+  
+  </svg>
+
+
+  </div>
+  
+  <div class="button-container">
+    <button class="button" onclick="showNextCanvas()">Next Canvas</button>
+  </div>
+  
+  <script>
+    const canvases = document.querySelectorAll('.canvas');
+    let currentIndex = 0;
+    
+    function showNextCanvas() {
+      canvases[currentIndex].style.display = 'none';
+      currentIndex = (currentIndex + 1) % canvases.length;
+      canvases[currentIndex].style.display = 'block';
+    }
+  </script>
+</body>
+</html>
